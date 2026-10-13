@@ -1,0 +1,1254 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Brand Theme Colors */
+    --color-primary: #a855f7;
+    --color-primary-glow: rgba(168, 85, 247, 0.25);
+    --color-secondary: #ec4899;
+    --color-secondary-glow: rgba(236, 72, 153, 0.25);
+    --color-accent: #06b6d4;
+
+
+    /* Base & Layout Backgrounds */
+    --color-bg-base: #060709;
+    --color-bg-section: #0c0d14;
+    --color-bg-footer: #161922;
+    --color-surface: #11131a;
+    --color-surface-muted: #1e212f;
+
+
+    /* Borders */
+    --color-border: rgba(255, 255, 255, 0.355);
+
+
+    /* Typography Text Colors */
+    --white: #ffffff;
+    --color-text-body: #cbd5e1;
+    --color-text-muted: #9fa6b2;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.9);
+    --gradient-accent: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-accent) 0%, #3b82f6 100%);
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+}
+
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+
+small {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+em {
+    color: var(--color-text-body);
+}
+
+
+/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE  */
+
+body {
+    background-color: var(--color-bg-base);
+    padding-left: clamp(5px, 2vw, 40px);
+    padding-right: clamp(5px, 2vw, 40px);
+    overflow-x: hidden;
+}
+
+
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+
+header {
+    display: flex;
+    position: fixed;
+    border-bottom: 1px solid var(--color-border);
+    background-color: rgba(0, 0, 0, 0.659);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    left: 30px;
+    right: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    background: var(--gradient-accent);
+    background-clip: text;
+    color: transparent;
+}
+
+header nav a {
+    font-family: var(--font-display);
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+    padding: 10px 20px;
+    font-weight: 600px;
+    text-wrap: nowrap;
+}
+
+header nav a:hover {
+    background-color: #9b9a9c;
+    color: var(--white);
+
+}
+
+.cartbackground {
+    background: var(--color-secondary);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+}
+
+.cartbackground:hover {
+    border: 1px solid var(--white);
+    background: var(--color-primary);
+    color: var(--white);
+    box-shadow: 2px 0px 10px 10px var(--color-primary-glow);
+}
+
+/* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+
+main {
+    padding-top: 80px;
+}
+
+
+/* SECTION-1 (HEROSECTION)🧑‍💻*/
+
+.herosection {
+    font-size: larger;
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.lefthero {
+    max-width: 500px;
+    text-wrap: wrap;
+
+}
+
+.lefthero h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    text-transform: uppercase;
+}
+
+.lefthero h2 span {
+    background: var(--gradient-accent);
+    background-clip: text;
+    color: transparent;
+}
+
+.herosection p {
+    font-size: clamp(1rem, 1.2vw, 3rem);
+    font-family: var(--font-body);
+}
+
+.CTA {
+    display: flex;
+    gap: 20px;
+}
+
+.CTA a {
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: clamp(1rem, 1.2vw, 3rem);
+    border: 2px solid rgba(90, 89, 89, 0.668);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    transition: all 0.3s linear 0s;
+}
+
+.CTA a:hover {
+    border: 1px solid var(--white);
+    border-radius: var(--radius-sm);
+    box-shadow: 2px 0px 5px 5px var(--color-secondary-glow);
+    transform: translateY(-5px);
+}
+
+.CTA1C {
+    background: var(--gradient-accent);
+}
+
+.CTA1C:hover {
+    background: var(--gradient-accent);
+}
+
+
+.righthero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    position: relative;
+
+}
+
+.righthero img {
+
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 24px;
+    z-index: 1;
+    animation: rightheroimg 3s linear 0s infinite alternate;
+}
+
+@keyframes rightheroimg {
+
+    from {}
+
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+.glow {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(50px);
+    opacity: 50%;
+
+}
+
+.orb1 {
+    background-color: #a855f7;
+    margin-left: 300px;
+    top: 150px;
+    animation: orb1 3s linear 0s infinite alternate;
+}
+
+@keyframes orb1 {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+.orb2 {
+    background-color: #ec4899;
+    margin-right: 300px;
+    top: 10px;
+    animation: orb2 3s linear 0s infinite alternate;
+}
+
+@keyframes orb2 {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+
+
+/* SECTION-2 ( THE WEEK DROP ) 🧑‍💻 */
+
+
+
+
+.weekdrop {
+    background-color: #0c0d14;
+    padding: 40PX 60PX;
+}
+
+.weekdrop h2 {
+    text-transform: uppercase;
+}
+
+.weekdrop>p {
+    padding: 15px 0px;
+    font-family: var(--font-body);
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards article {
+    flex: 1 1 260px;
+    min-width: 260px;
+    display: flex;
+    max-width: 320px;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rgb(88, 88, 88);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--color-surface);
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.cards article:hover {
+    border: 1px solid;
+    box-shadow: 1px 1px 7px 7px rgba(205, 80, 255, 0.426);
+    transform: translateY(-10px);
+}
+
+.cards article h3 {
+    padding: 20px 0px 0px 10px;
+    font-size: 1.1rem;
+}
+
+.cards article p:first-of-type {
+    padding: 0px 10px 0px;
+    font-size: 1rem;
+}
+
+.cards article p span {
+    color: #7944ff;
+}
+
+.cards article p:nth-of-type(2) {
+    padding: 10px 0px 0px 10px;
+    font-size: 1rem;
+}
+
+.cards article p mark {
+    color: white;
+    background: var(--gradient-accent);
+    padding: 5px 10px;
+    border-radius: 30px;
+    position: absolute;
+    top: 15px;
+    left: 220px;
+    box-shadow: 0px 0px 7px 2px rgb(55, 55, 55);
+}
+
+.cards article a {
+    padding: 10px 0px 15px 10px;
+    text-decoration: underline;
+    color: #4495a3;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.cards article a:hover {
+    color: rgb(227, 129, 145);
+}
+
+.cards article button {
+    border: 0.1rem solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cards article button:hover {
+    color: white;
+    border: 0.1rem solid #7944ff;
+    background: #7944ff;
+    flex-wrap: wrap;
+
+}
+
+.cards article figure {
+    overflow: hidden;
+    aspect-ratio: 3/4;
+}
+
+.cards article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.5s linear;
+}
+
+.cards article figure img:hover {
+    filter: drop-shadow(10px 10px 20px black);
+    transform: scale(1.1);
+}
+
+
+
+/* SECTION-3 ( BESTSELLERS)🧑‍💻 */
+
+
+
+.Hbestsellers {
+    padding: 80px 50px;
+}
+
+.Hbestsellers h2 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.mainheading {
+    padding: 15px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--gradient-accent);
+    text-align: center;
+}
+
+.Hbestsellers table {
+    color: white;
+    width: 100%;
+    min-width: 700px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 30px;
+    border-collapse: collapse;
+}
+
+.th th {
+    padding: 20px 15px;
+    color: var(--color-text-body);
+    background: var(--color-surface-muted);
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+}
+
+.Hbestsellers table td {
+    padding: 20px 15px;
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+    background: var(--color-surface);
+    border-top: 1px solid grey;
+}
+
+tr:hover td:first-of-type {
+    color: var(--color-secondary);
+}
+
+tr:hover td {
+    background: rgb(48, 48, 48);
+}
+
+
+/* SECTION-4 (WHY)🧑‍💻*/
+
+
+.why {
+    padding: 80px 50px;
+    color: white;
+}
+
+.why h2 {
+    text-transform: uppercase;
+}
+
+.why p {
+    padding-bottom: 10px;
+    font-family: var(--font-display);
+}
+
+.why ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+}
+
+.why ul li {
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    flex: 1 1 240px;
+    padding: 15px 10px;
+    border-left: 3px solid var(--color-primary);
+    border-radius: 10px;
+}
+
+.why ul li:hover {
+    border-left: 3px solid var(--color-secondary);
+}
+
+.why ul li strong {
+    text-transform: capitalize;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.why h3 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.why dl {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+    border-top: 1px solid var(--color-surface-muted);
+}
+
+.why dt {
+    color: #4495a3;
+    flex: 1 1 80px;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+}
+
+.why dt:hover {
+    color: var(--color-accent);
+}
+
+.why dd {
+    color: #9b9a9c;
+    flex: 1 1 240px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+/* SECTION-5 (get early access )🧑‍💻*/
+
+.getearly {
+    background: rgb(10, 12, 23);
+    padding: 80px 50px;
+    color: white;
+    position: relative;
+}
+
+.getearly h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.getearly p {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.getearly form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    width: 90%;
+
+}
+
+.getearly form input {
+    flex: 1;
+    width: 100%;
+    padding: 7px 190px 7px 5px;
+    background: #11131b;
+    border: 1px solid #292e41;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.getearly form button {
+    text-align: center;
+    padding: 6px 40px 6px 40px;
+    background: var(--gradient-accent);
+    border: 1px solid var(--gradient-accent);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+    white-space: nowrap;
+}
+
+.getearly form button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+footer {
+    background: var(--color-bg-footer);
+    padding: 80px 50px 20px 50px;
+}
+
+footer span {
+    text-transform: uppercase;
+    background: var(--gradient-accent);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+footer p {
+    padding: 20px 0px;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 5px 5px;
+}
+
+footer nav ul li a {
+    flex: 1 1 50px;
+    border: 1px solid rgba(96, 96, 96, 0.358);
+    padding: 5px;
+    text-transform: uppercase;
+    color: #9b9a9c;
+    font-size: 0.8rem;
+}
+
+footer nav ul li a:hover {
+    background: var(--gradient-accent);
+    background-clip: text;
+    color: transparent;
+
+}
+
+footer p a {
+    color: #4495a3;
+    text-transform: capitalize;
+    padding: 0px 2px;
+}
+
+footer p a:hover {
+    color: #ec4899;
+}
+
+
+/* PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS   PRODUCTS PRODUCTS PRODUCTS  */
+
+/* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+/* (COKMPLETED FIRST UNDER HOME PAGE ) */
+
+
+/* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN  */
+
+/* SECTION-1 (CATALOGUE)🧑‍💻*/
+
+
+
+#catalogue {
+    padding: 100px 0px 80px 30px;
+}
+
+#catalogue h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    text-transform: uppercase;
+}
+
+#catalogue p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-family: var(--font-body);
+}
+
+
+/* SECTION-2 AND 3  (SIDEBAR & PRODUCTS)🧑‍💻*/
+
+
+/* section 2 */
+
+
+#layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background: #0C0D14;
+    align-items: flex-start;
+}
+
+
+#sidebar {
+    margin: 40px 10px 40px 20px;
+    border: 1px solid var(--color-surface-muted);
+    background: #11131A;
+    padding: 20px 15px ;
+    position: sticky;
+    top: 60px;
+}
+
+#sidebar h3 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-surface-muted);
+
+}
+
+#sidebar h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+#sidebar ul li {
+    padding: 15px 0px;
+    color: var(--color-text-muted);
+    text-transform: capitalize;
+}
+
+#sidebar input[type="checkbox"] {
+    accent-color: var(--color-primary);
+    height: 15px;
+    width: 15px;
+}
+
+#sidebar label {
+    color: var(--color-text-muted);
+}
+
+#sidebar input[type="number"] {
+    background: var(--color-surface-muted);
+    border: 1px solid transparent;
+    width: 100%;
+    margin: 10px 0px;
+    margin-right: 10px;
+    padding: 5px 0px;
+    color: white;
+    outline: none;
+    border-radius: 2px;
+    border-width: 2px;
+}
+
+#sidebar input[type="number"]:focus {
+    border-color: purple;
+}
+
+#sidebar select {
+    background: var(--color-surface-muted);
+    border: 1px solid transparent;
+    width: 100%;
+    margin: 10px 0px;
+    margin-right: 10px;
+    padding: 5px 0px;
+    color: white;
+    outline: none;
+    border-radius: 2px;
+    border-width: 2px;
+}
+
+#B1 {
+    padding: 10px 50px;
+    background: white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 10px 0px;
+    transition: all 0.8s linear;
+}
+
+#B1:hover {
+    background: var(--color-primary);
+}
+
+#B2 {
+    padding: 10px 58px;
+    background: #11131A;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--color-text-muted);
+    border-radius: 5px;
+}
+
+
+/* section3 */
+
+
+#products {
+    margin: 40px 0px 40px 20px;
+}
+
+#products h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--color-text-muted);
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+#grid article {
+    padding: 10px;
+    border: 1px solid rgb(88, 88, 88);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--color-surface);
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+#grid article:hover {
+    border: 1px solid;
+    box-shadow: 1px 1px 7px 7px rgba(205, 80, 255, 0.426);
+    transform: translateY(-10px);
+}
+
+#grid article h3 {
+    padding: 20px 0px 0px 10px;
+    font-size: 1.1rem;
+}
+
+#grid article p:first-of-type {
+    padding: 0px 10px 0px;
+    font-size: 1rem;
+}
+
+#grid article p span {
+    color: #7944ff;
+}
+
+#grid article p:nth-of-type(2) {
+    padding: 10px 0px 0px 10px;
+    font-size: 1rem;
+}
+
+#grid article p mark {
+    color: white;
+    font-size: 12px;
+    background: var(--gradient-accent);
+    padding: 5px 10px;
+    border-radius: 30px;
+    position: absolute;
+    top: 15px;
+    left: 195px;
+    box-shadow: 0px 0px 7px 2px rgb(55, 55, 55);
+}
+
+#grid article a {
+    display: inline-block;
+    padding: 20px 10px;
+    text-decoration: underline;
+    color: #4495a3;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+#grid article a:hover {
+    color: rgb(227, 129, 145);
+}
+
+#grid article button {
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 5px;
+    color: white;
+    background: #11131A;
+    margin: 15px 5px 15px 10px;
+    padding: 10px 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#grid article button:hover {
+    color: white;
+    border: 1px solid #7944ff;
+    background: #7944ff;
+
+}
+
+#grid article figure {
+    overflow: hidden;
+    aspect-ratio: 4/4;
+}
+
+#grid article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+#grid article figure img:hover {
+    transform: scale(1.1);
+}
+
+/* SECTION-4 (bestsellers)🧑‍💻*/
+
+
+.Pbestsellers {
+    background: #0C0D14;
+    padding: 100px 30px;
+}
+
+.Pbestsellers h2 {
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.Pbestsellers p {
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+
+.Pbestsellers table {
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-bottom: 1px solid var(--color-text-body);
+    box-shadow: 0px 10px 8px 10px rgb(0, 0, 0);
+}
+
+.producttableMH {
+    color: white;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: black;
+    text-align: center;
+}
+
+.heading th {
+    padding: 20px 15px;
+    color: white;
+    background: #11131A;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+}
+
+#side th {
+    padding: 20px 15px;
+    color: var(--color-accent);
+    background: #1E212F;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    border-top: 0.1rem solid grey;
+}
+
+#side td {
+    padding: 20px 15px;
+    color: var(--color-text-muted);
+    background: #11131A;
+    text-align: left;
+    font-weight: 400;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    border-top: 0.1rem solid grey;
+
+}
+
+#side td mark {
+    background: rgba(1, 134, 161, 0.684);
+    color: rgb(255, 255, 255);
+}
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER  */
+/* (COKMPLETED FIRST UNDER HOME PAGE ) */
+
+/*  RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN  */
+
+
+/* RESPONSIVE DESIGN FOR 1200PX 😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️*/
+
+@media (max-width:1200px) {
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+
+    header {
+        left: 0px;
+        right: 0px;
+    }
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+    /* SECTION-1 (HEROSECTION)🧑‍💻*/
+
+    .herosection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .CTA {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* SECTION-2 ( THE WEEK DROP ) 🧑‍💻 */
+
+
+}
+
+/* RESPONSIVE DESIGN FOR 992PX 😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️*/
+
+@media (max-width:992px) {
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+    /* SECTION-1 (HEROSECTION)🧑‍💻*/
+
+    .herosection {
+        padding-top: 30px;
+    }
+}
+
+/* RESPONSIVE DESIGN FOR 760PX😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️*/
+
+@media (max-width:760px) {
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+    header {
+        position: static;
+    }
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+    main {
+        padding-top: 0px;
+    }
+
+    /* SECTION-1 (HEROSECTION)🧑‍💻*/
+
+    .herosection {
+        padding: 0px 10px;
+    }
+
+
+    /* SECTION-2 ( THE WEEK DROP ) 🧑‍💻 */
+
+    .weekdrop {
+        padding: 40PX 20PX;
+    }
+
+
+
+    /* SECTION-3 ( BESTSELLERS)🧑‍💻 */
+
+    .Hbestsellers {
+        padding: 60px 10px;
+    }
+
+    .tablescroll {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+
+
+    /* PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS   PRODUCTS PRODUCTS PRODUCTS  */
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+    /* (COKMPLETED FIRST UNDER HOME PAGE ) */
+
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN  */
+
+    /* SECTION-1 (CATALOGUE)🧑‍💻*/
+
+
+    #catalogue {
+        padding: 30px 40px;
+    }
+
+    /* SECTION-2 AND 3  (SIDEBAR & PRODUCTS)🧑‍💻*/
+
+
+    /* section 2 */
+
+
+    #layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #sidebar {
+        margin: 40px 10px 40px 1px;
+        padding: 20px 15px ;
+        position: static;
+        width: 100%;
+    }
+
+}
+
+/* RESPONSIVE DESIGN FOR 480PX 😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️*/
+
+@media (max-width:480px) {
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+    header {
+        padding: 20px 15px;
+    }
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+    /* SECTION-1 (HEROSECTION)🧑‍💻*/
+
+    .CTA a {
+        flex-direction: column;
+    }
+
+
+    /* SECTION-2 ( THE WEEK DROP ) 🧑‍💻 */
+
+    .weekdrop {
+        padding: 40PX 20PX;
+    }
+
+
+    /* SECTION-5 (get early access )🧑‍💻*/
+
+    .getearly form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .getearly form button {
+        width: 100%;
+    }
+
+}
+
+/* RESPONSIVE DESIGN FOR 359PX 😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️😶‍🌫️*/
+
+@media (max-width:359px) {
+
+    /* HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
+
+    /* MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN */
+
+    /* SECTION-1 (HEROSECTION)🧑‍💻*/
+    .righthero img {
+
+        height: 250px;
+        width: 200px;
+
+    }
+
+
+    /* SECTION-2 ( THE WEEK DROP ) 🧑‍💻 */
+
+    .weekdrop {
+        padding: 40PX 20PX;
+    }
+}
